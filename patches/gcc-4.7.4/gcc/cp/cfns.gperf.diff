@@ -1,0 +1,12 @@
+--- gcc-4.7.4/gcc/cp/cfns.gperf	2024-01-06 11:55:59.676170396 +0000
++++ patches/gcc-4.7.4/gcc/cp/cfns.gperf.fix	2024-01-06 11:53:49.241915899 +0000
+@@ -22,6 +22,9 @@
+ static unsigned int hash (const char *, unsigned int);
+ #ifdef __GNUC__
+ __inline
++#ifdef __GNUC_STDC_INLINE__
++__attribute__ ((__gnu_inline__))
++#endif
+ #endif
+ const char * libc_name_p (const char *, unsigned int);
+ %}

@@ -1,0 +1,11 @@
+--- gcc-6.1.0/gcc/ubsan.c	2016-01-06 10:24:15.000000000 +0000
++++ patches/gcc-6.1.0/gcc/ubsan.c.fix	2023-12-08 23:29:23.585542677 +0000
+@@ -1470,7 +1470,7 @@
+ 
+   expanded_location xloc = expand_location (loc);
+   if (xloc.file == NULL || strncmp (xloc.file, "\1", 2) == 0
+-      || xloc.file == '\0' || xloc.file[0] == '\xff'
++      || xloc.file[0] == '\0' || xloc.file[0] == '\xff'
+       || xloc.file[1] == '\xff')
+     return false;
+ 

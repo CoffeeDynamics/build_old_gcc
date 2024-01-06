@@ -1,0 +1,11 @@
+--- gcc-4.7.0/gcc/doc/cppopts.texi	2011-12-20 20:44:13.000000000 +0000
++++ patches/gcc-4.7.0/gcc/doc/cppopts.texi.fix	2024-01-06 17:37:10.964790685 +0000
+@@ -803,7 +803,7 @@
+ Enable special code to work around file systems which only permit very
+ short file names, such as MS-DOS@.
+ 
+-@itemx --help
++@item -help
+ @itemx --target-help
+ @opindex help
+ @opindex target-help

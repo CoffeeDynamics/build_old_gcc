@@ -1,0 +1,18 @@
+--- gcc-4.7.0/gcc/doc/generic.texi	2011-12-23 22:07:16.000000000 +0000
++++ patches/gcc-4.7.0/gcc/doc/generic.texi.fix	2024-01-06 17:37:10.964790685 +0000
+@@ -1415,13 +1415,13 @@
+ not matter.  The type of the operands and that of the result are
+ always of @code{BOOLEAN_TYPE} or @code{INTEGER_TYPE}.
+ 
+-@itemx POINTER_PLUS_EXPR
++@item POINTER_PLUS_EXPR
+ This node represents pointer arithmetic.  The first operand is always
+ a pointer/reference type.  The second operand is always an unsigned
+ integer type compatible with sizetype.  This is the only binary
+ arithmetic operand that can operate on pointer types.
+ 
+-@itemx PLUS_EXPR
++@item PLUS_EXPR
+ @itemx MINUS_EXPR
+ @itemx MULT_EXPR
+ These nodes represent various binary arithmetic operations.

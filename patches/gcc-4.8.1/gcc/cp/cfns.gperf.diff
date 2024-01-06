@@ -1,0 +1,23 @@
+--- gcc-4.8.1/gcc/cp/cfns.gperf	2023-12-13 22:36:30.315045413 +0000
++++ patches/gcc-4.8.1/gcc/cp/cfns.gperf.fix	2023-12-13 22:36:41.850821975 +0000
+@@ -1,3 +1,5 @@
++%language=C++
++%define class-name libc_name
+ %{
+ /* Copyright (C) 2000-2013 Free Software Foundation, Inc.
+ 
+@@ -16,14 +18,6 @@
+ You should have received a copy of the GNU General Public License
+ along with GCC; see the file COPYING3.  If not see
+ <http://www.gnu.org/licenses/>.  */
+-#ifdef __GNUC__
+-__inline
+-#endif
+-static unsigned int hash (const char *, unsigned int);
+-#ifdef __GNUC__
+-__inline
+-#endif
+-const char * libc_name_p (const char *, unsigned int);
+ %}
+ %%
+ # The standard C library functions, for feeding to gperf; the result is used

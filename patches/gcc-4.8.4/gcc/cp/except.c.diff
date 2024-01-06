@@ -1,0 +1,12 @@
+--- gcc-4.8.4/gcc/cp/except.c	2023-12-13 21:58:11.789261678 +0000
++++ patches/gcc-4.8.4/gcc/cp/except.c.fix	2023-12-13 20:46:33.343979849 +0000
+@@ -1025,7 +1025,8 @@
+      unless the system headers are playing rename tricks, and if
+      they are, we don't want to be confused by them.  */
+   id = DECL_NAME (fn);
+-  return !!libc_name_p (IDENTIFIER_POINTER (id), IDENTIFIER_LENGTH (id));
++  return !!libc_name::libc_name_p (IDENTIFIER_POINTER (id),
++				   IDENTIFIER_LENGTH (id));
+ }
+ 
+ /* Returns nonzero if an exception of type FROM will be caught by a

@@ -1,0 +1,15 @@
+--- gcc-4.8.0/gcc/cp/ChangeLog	2013-03-22 10:04:26.000000000 +0000
++++ patches/gcc-4.8.0/gcc/cp/ChangeLog.fix	2023-12-13 22:46:42.110886056 +0000
+@@ -1,3 +1,12 @@
++2016-02-19  Jakub Jelinek  <jakub@redhat.com>
++	    Bernd Edlinger  <bernd.edlinger@hotmail.de>
++
++	* Make-lang.in: Invoke gperf with -L C++.
++	* cfns.gperf: Remove prototypes for hash and libc_name_p
++	inlines.
++	* cfns.h: Regenerated.
++	* except.c (nothrow_libfn_p): Adjust.
++
+ 2013-03-22  Release Manager
+ 
+ 	* GCC 4.8.0 released.

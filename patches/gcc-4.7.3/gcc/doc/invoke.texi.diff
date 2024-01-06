@@ -1,0 +1,11 @@
+--- gcc-4.7.3/gcc/doc/invoke.texi	2013-03-30 11:10:22.000000000 +0000
++++ patches/gcc-4.7.3/gcc/doc/invoke.texi.fix	2024-01-06 15:15:42.738963241 +0000
+@@ -5350,7 +5350,7 @@
+ Dump after delayed branch scheduling.
+ 
+ @item -fdump-rtl-dce1
+-@itemx -fdump-rtl-dce2
++@item -fdump-rtl-dce2
+ @opindex fdump-rtl-dce1
+ @opindex fdump-rtl-dce2
+ @option{-fdump-rtl-dce1} and @option{-fdump-rtl-dce2} enable dumping after

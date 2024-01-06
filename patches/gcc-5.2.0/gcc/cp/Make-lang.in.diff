@@ -1,0 +1,11 @@
+--- gcc-5.2.0/gcc/cp/Make-lang.in	2015-01-15 22:58:42.000000000 +0000
++++ patches/gcc-5.2.0/gcc/cp/Make-lang.in.fix	2023-12-09 23:18:44.508215245 +0000
+@@ -111,7 +111,7 @@
+ # deleting the $(srcdir)/cp/cfns.h file.
+ $(srcdir)/cp/cfns.h:
+ endif
+-	gperf -o -C -E -k '1-6,$$' -j1 -D -N 'libc_name_p' -L ANSI-C \
++	gperf -o -C -E -k '1-6,$$' -j1 -D -N 'libc_name_p' -L C++ \
+ 		$(srcdir)/cp/cfns.gperf --output-file $(srcdir)/cp/cfns.h
+ 
+ #

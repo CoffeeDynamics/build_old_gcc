@@ -1,0 +1,11 @@
+--- gcc-4.7.3/libgcc/config/i386/linux-unwind.h	2012-04-20 08:51:30.000000000 +0100
++++ patches/gcc-4.7.3/libgcc/config/i386/linux-unwind.h.fix	2024-01-06 15:08:23.755449377 +0000
+@@ -53,7 +53,7 @@
+   if (*(unsigned char *)(pc+0) == 0x48
+       && *(unsigned long long *)(pc+1) == RT_SIGRETURN_SYSCALL)
+     {
+-      struct ucontext *uc_ = context->cfa;
++      struct ucontext_t *uc_ = context->cfa;
+       /* The void * cast is necessary to avoid an aliasing warning.
+          The aliasing warning is correct, but should not be a problem
+          because it does not alias anything.  */
