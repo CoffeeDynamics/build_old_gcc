@@ -207,10 +207,8 @@ function install(){
    src=`readlink -e ${_src}`
    _bld="${_src}_build"
    _ins="${_src}_install"
-   #mkdir ${_bld} ${_ins}
    mkdir ${_bld}
    bld=`readlink -e ${_bld}`
-   #ins=`readlink -e ${_ins}`
    abs_install_directory+="/${_ins}"
    mkdir "${abs_install_directory}"
    
