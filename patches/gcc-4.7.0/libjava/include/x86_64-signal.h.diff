@@ -1,0 +1,19 @@
+--- gcc-4.7.0/libjava/include/x86_64-signal.h	2007-01-12 13:30:56.000000000 +0100
++++ patches/gcc-4.7.0/libjava/include/x86_64-signal.h.fix	2025-01-06 14:30:31.295746588 +0100
+@@ -16,6 +16,7 @@
+ #define JAVA_SIGNAL_H 1
+ 
+ #include <signal.h>
++#include <unistd.h>
+ #include <sys/syscall.h>
+ 
+ #define HANDLE_SEGV 1
+@@ -28,7 +29,7 @@
+ #define HANDLE_DIVIDE_OVERFLOW						\
+ do									\
+ {									\
+-  struct ucontext *_uc = (struct ucontext *)_p;				\
++  ucontext_t *_uc = (ucontext_t *)_p;					\
+   gregset_t &_gregs = _uc->uc_mcontext.gregs;				\
+   unsigned char *_rip = (unsigned char *)_gregs[REG_RIP];		\
+ 									\
