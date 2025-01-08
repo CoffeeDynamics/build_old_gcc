@@ -143,7 +143,8 @@ function apply_patches(){
          ;;
 
       "4.9.4")
-         patchme ${gccroot}/libgcc/config/i386/linux-unwind.h ${patchroot}/libgcc/config/i386/linux-unwind.h.diff
+         patchme ${gccroot}/libgcc/config/i386/linux-unwind.h ${patchroot}/libgcc/config/i386/linux-unwind.h.diff && \
+         patchme ${gccroot}/libjava/include/x86_64-signal.h ${patchroot}/libjava/include/x86_64-signal.h.diff
          ;;
    
       "4.9.0" | \
@@ -154,6 +155,7 @@ function apply_patches(){
       "5.2.0" | \
       "5.3.0")
          patchme ${gccroot}/libgcc/config/i386/linux-unwind.h ${patchroot}/libgcc/config/i386/linux-unwind.h.diff && \
+         patchme ${gccroot}/libjava/include/x86_64-signal.h ${patchroot}/libjava/include/x86_64-signal.h.diff && \
          patchme ${gccroot}/gcc/cp/ChangeLog ${patchroot}/gcc/cp/ChangeLog.diff && \
          patchme ${gccroot}/gcc/cp/Make-lang.in ${patchroot}/gcc/cp/Make-lang.in.diff && \
          patchme ${gccroot}/gcc/cp/cfns.gperf ${patchroot}/gcc/cp/cfns.gperf.diff && \
