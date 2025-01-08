@@ -166,8 +166,9 @@ function apply_patches(){
       "6.1.0" | \
       "6.2.0" | \
       "6.3.0")
-         patchme ${gccroot}/gcc/ubsan.c ${patchroot}/gcc/ubsan.c.diff && \
-         patchme ${gccroot}/libgcc/config/i386/linux-unwind.h ${patchroot}/libgcc/config/i386/linux-unwind.h.diff
+         patchme ${gccroot}/libgcc/config/i386/linux-unwind.h ${patchroot}/libgcc/config/i386/linux-unwind.h.diff && \
+         patchme ${gccroot}/libjava/include/x86_64-signal.h ${patchroot}/libjava/include/x86_64-signal.h.diff && \
+         patchme ${gccroot}/gcc/ubsan.c ${patchroot}/gcc/ubsan.c.diff
          ;;
    
       "5.4.0" | \
