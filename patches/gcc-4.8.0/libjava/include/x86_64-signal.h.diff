@@ -1,0 +1,11 @@
+--- gcc-4.8.0/libjava/include/x86_64-signal.h	2013-01-04 13:49:55.000000000 +0100
++++ patches/gcc-4.8.0/libjava/include/x86_64-signal.h.fix	2025-01-08 15:14:22.885771563 +0100
+@@ -28,7 +28,7 @@
+ #define HANDLE_DIVIDE_OVERFLOW						\
+ do									\
+ {									\
+-  struct ucontext *_uc = (struct ucontext *)_p;				\
++  ucontext_t *_uc = (ucontext_t *)_p;				\
+   gregset_t &_gregs = _uc->uc_mcontext.gregs;				\
+   unsigned char *_rip = (unsigned char *)_gregs[REG_RIP];		\
+ 									\
