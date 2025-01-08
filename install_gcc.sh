@@ -127,7 +127,11 @@ function apply_patches(){
          ;;
    
       "4.8.0" | \
-      "4.8.1")
+      "4.8.1" | \
+      "4.8.2" | \
+      "4.8.3" | \
+      "4.8.4" | \
+      "4.8.5")
          patchme ${gccroot}/libgcc/config/i386/linux-unwind.h ${patchroot}/libgcc/config/i386/linux-unwind.h.diff && \
          patchme ${gccroot}/libjava/include/x86_64-signal.h ${patchroot}/libjava/include/x86_64-signal.h.diff && \
          patchme ${gccroot}/gcc/doc/gcc.texi ${patchroot}/gcc/doc/gcc.texi.diff && \
@@ -138,19 +142,6 @@ function apply_patches(){
          patchme ${gccroot}/gcc/cp/except.c ${patchroot}/gcc/cp/except.c.diff
          ;;
 
-      "4.8.2" | \
-      "4.8.3" | \
-      "4.8.4" | \
-      "4.8.5")
-         patchme ${gccroot}/libgcc/config/i386/linux-unwind.h ${patchroot}/libgcc/config/i386/linux-unwind.h.diff && \
-         patchme ${gccroot}/gcc/doc/gcc.texi ${patchroot}/gcc/doc/gcc.texi.diff && \
-         patchme ${gccroot}/gcc/cp/ChangeLog ${patchroot}/gcc/cp/ChangeLog.diff && \
-         patchme ${gccroot}/gcc/cp/Make-lang.in ${patchroot}/gcc/cp/Make-lang.in.diff && \
-         patchme ${gccroot}/gcc/cp/cfns.gperf ${patchroot}/gcc/cp/cfns.gperf.diff && \
-         patchme ${gccroot}/gcc/cp/cfns.h ${patchroot}/gcc/cp/cfns.h.diff && \
-         patchme ${gccroot}/gcc/cp/except.c ${patchroot}/gcc/cp/except.c.diff
-         ;;
-      
       "4.9.4")
          patchme ${gccroot}/libgcc/config/i386/linux-unwind.h ${patchroot}/libgcc/config/i386/linux-unwind.h.diff
          ;;
