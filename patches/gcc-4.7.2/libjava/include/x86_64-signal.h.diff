@@ -1,5 +1,5 @@
---- gcc-4.7.0/libjava/include/x86_64-signal.h	2007-01-12 13:30:56.000000000 +0100
-+++ patches/gcc-4.7.0/libjava/include/x86_64-signal.h.fix	2025-01-06 14:30:31.295746588 +0100
+--- gcc-4.7.2/libjava/include/x86_64-signal.h	2007-01-12 13:30:56.000000000 +0100
++++ patches/gcc-4.7.2/libjava/include/x86_64-signal.h.fix	2025-01-06 14:30:31.295746588 +0100
 @@ -16,6 +16,7 @@
  #define JAVA_SIGNAL_H 1
  

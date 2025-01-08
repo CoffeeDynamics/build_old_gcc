@@ -118,11 +118,12 @@ function apply_patches(){
    
       "4.7.3" | \
       "4.7.4")
-         patchme ${gccroot}/libgcc/config/i386/linux-unwind.h -i ${patchroot}/libgcc/config/i386/linux-unwind.h.diff && \
-         patchme ${gccroot}/gcc/cp/cfns.gperf -i ${patchroot}/gcc/cp/cfns.gperf.diff && \
-         patchme ${gccroot}/gcc/cp/cfns.h -i ${patchroot}/gcc/cp/cfns.h.diff && \
-         patchme ${gccroot}/gcc/doc/invoke.texi -i ${patchroot}/gcc/doc/invoke.texi.diff && \
-         patchme ${gccroot}/gcc/doc/gcc.texi -i ${patchroot}/gcc/doc/gcc.texi.diff
+         patchme ${gccroot}/libgcc/config/i386/linux-unwind.h ${patchroot}/libgcc/config/i386/linux-unwind.h.diff && \
+         patchme ${gccroot}/libjava/include/x86_64-signal.h ${patchroot}/libjava/include/x86_64-signal.h.diff && \
+         patchme ${gccroot}/gcc/cp/cfns.gperf ${patchroot}/gcc/cp/cfns.gperf.diff && \
+         patchme ${gccroot}/gcc/cp/cfns.h ${patchroot}/gcc/cp/cfns.h.diff && \
+         patchme ${gccroot}/gcc/doc/invoke.texi ${patchroot}/gcc/doc/invoke.texi.diff && \
+         patchme ${gccroot}/gcc/doc/gcc.texi ${patchroot}/gcc/doc/gcc.texi.diff
          ;;
    
       "4.8.0" | \
@@ -131,17 +132,17 @@ function apply_patches(){
       "4.8.3" | \
       "4.8.4" | \
       "4.8.5")
-         patchme ${gccroot}/libgcc/config/i386/linux-unwind.h -i ${patchroot}/libgcc/config/i386/linux-unwind.h.diff && \
-         patchme ${gccroot}/gcc/doc/gcc.texi -i ${patchroot}/gcc/doc/gcc.texi.diff && \
-         patchme ${gccroot}/gcc/cp/ChangeLog -i ${patchroot}/gcc/cp/ChangeLog.diff && \
-         patchme ${gccroot}/gcc/cp/Make-lang.in -i ${patchroot}/gcc/cp/Make-lang.in.diff && \
-         patchme ${gccroot}/gcc/cp/cfns.gperf -i ${patchroot}/gcc/cp/cfns.gperf.diff && \
-         patchme ${gccroot}/gcc/cp/cfns.h -i ${patchroot}/gcc/cp/cfns.h.diff && \
-         patchme ${gccroot}/gcc/cp/except.c -i ${patchroot}/gcc/cp/except.c.diff
+         patchme ${gccroot}/libgcc/config/i386/linux-unwind.h ${patchroot}/libgcc/config/i386/linux-unwind.h.diff && \
+         patchme ${gccroot}/gcc/doc/gcc.texi ${patchroot}/gcc/doc/gcc.texi.diff && \
+         patchme ${gccroot}/gcc/cp/ChangeLog ${patchroot}/gcc/cp/ChangeLog.diff && \
+         patchme ${gccroot}/gcc/cp/Make-lang.in ${patchroot}/gcc/cp/Make-lang.in.diff && \
+         patchme ${gccroot}/gcc/cp/cfns.gperf ${patchroot}/gcc/cp/cfns.gperf.diff && \
+         patchme ${gccroot}/gcc/cp/cfns.h ${patchroot}/gcc/cp/cfns.h.diff && \
+         patchme ${gccroot}/gcc/cp/except.c ${patchroot}/gcc/cp/except.c.diff
          ;;
       
       "4.9.4")
-         patchme ${gccroot}/libgcc/config/i386/linux-unwind.h -i ${patchroot}/libgcc/config/i386/linux-unwind.h.diff
+         patchme ${gccroot}/libgcc/config/i386/linux-unwind.h ${patchroot}/libgcc/config/i386/linux-unwind.h.diff
          ;;
    
       "4.9.0" | \
@@ -151,25 +152,25 @@ function apply_patches(){
       "5.1.0" | \
       "5.2.0" | \
       "5.3.0")
-         patchme ${gccroot}/libgcc/config/i386/linux-unwind.h -i ${patchroot}/libgcc/config/i386/linux-unwind.h.diff && \
-         patchme ${gccroot}/gcc/cp/ChangeLog -i ${patchroot}/gcc/cp/ChangeLog.diff && \
-         patchme ${gccroot}/gcc/cp/Make-lang.in -i ${patchroot}/gcc/cp/Make-lang.in.diff && \
-         patchme ${gccroot}/gcc/cp/cfns.gperf -i ${patchroot}/gcc/cp/cfns.gperf.diff && \
-         patchme ${gccroot}/gcc/cp/cfns.h -i ${patchroot}/gcc/cp/cfns.h.diff && \
-         patchme ${gccroot}/gcc/cp/except.c -i ${patchroot}/gcc/cp/except.c.diff
+         patchme ${gccroot}/libgcc/config/i386/linux-unwind.h ${patchroot}/libgcc/config/i386/linux-unwind.h.diff && \
+         patchme ${gccroot}/gcc/cp/ChangeLog ${patchroot}/gcc/cp/ChangeLog.diff && \
+         patchme ${gccroot}/gcc/cp/Make-lang.in ${patchroot}/gcc/cp/Make-lang.in.diff && \
+         patchme ${gccroot}/gcc/cp/cfns.gperf ${patchroot}/gcc/cp/cfns.gperf.diff && \
+         patchme ${gccroot}/gcc/cp/cfns.h ${patchroot}/gcc/cp/cfns.h.diff && \
+         patchme ${gccroot}/gcc/cp/except.c ${patchroot}/gcc/cp/except.c.diff
          ;;
    
       "6.1.0" | \
       "6.2.0" | \
       "6.3.0")
-         patchme ${gccroot}/gcc/ubsan.c -i ${patchroot}/gcc/ubsan.c.diff && \
-         patchme ${gccroot}/libgcc/config/i386/linux-unwind.h -i ${patchroot}/libgcc/config/i386/linux-unwind.h.diff
+         patchme ${gccroot}/gcc/ubsan.c ${patchroot}/gcc/ubsan.c.diff && \
+         patchme ${gccroot}/libgcc/config/i386/linux-unwind.h ${patchroot}/libgcc/config/i386/linux-unwind.h.diff
          ;;
    
       "5.4.0" | \
       "6.4.0" | \
       "7.1.0")
-         patchme ${gccroot}/libgcc/config/i386/linux-unwind.h -i ${patchroot}/libgcc/config/i386/linux-unwind.h.diff
+         patchme ${gccroot}/libgcc/config/i386/linux-unwind.h ${patchroot}/libgcc/config/i386/linux-unwind.h.diff
          ;;
    
    esac
