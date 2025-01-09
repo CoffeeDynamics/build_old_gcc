@@ -172,12 +172,15 @@ function apply_patches(){
          ;;
    
       "5.4.0" | \
-      "6.4.0" | \
-      "7.1.0")
+      "6.4.0")
          patchme ${gccroot}/libgcc/config/i386/linux-unwind.h ${patchroot}/libgcc/config/i386/linux-unwind.h.diff && \
          patchme ${gccroot}/libjava/include/x86_64-signal.h ${patchroot}/libjava/include/x86_64-signal.h.diff
          ;;
    
+      "7.1.0")
+         patchme ${gccroot}/libgcc/config/i386/linux-unwind.h ${patchroot}/libgcc/config/i386/linux-unwind.h.diff
+         ;;
+
    esac
 }
 
