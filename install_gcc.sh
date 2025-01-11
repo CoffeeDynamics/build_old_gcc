@@ -231,9 +231,10 @@ function install(){
    configure_opts='--disable-bootstrap'
    configure_opts+=' --disable-multilib'
    configure_opts+=' --disable-nls'
-   configure_opts+=' --enable-languages=all'  # all, default, ada, c, c++, d, fortran, go, jit, lto, m2, objc, obj-c++
-   configure_opts+=' --enable-host-shared'
    configure_opts+=' --disable-libsanitizer'
+   configure_opts+=' --enable-languages=all'  # all, default, ada, c, c++, d, fortran, go, jit (add --enable-host-shared), lto, m2, objc, obj-c++
+   configure_opts+=' --enable-host-shared'
+   configure_opts+=' --with-pic'              # if jit enabled, see https://gcc.gnu.org/bugzilla/show_bug.cgi?id=64296#c2
 
    # Configure using $CC if set
    cd ${bld} && \
